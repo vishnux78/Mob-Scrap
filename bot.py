@@ -7,7 +7,22 @@ import asyncio
 from urllib.parse import urlparse
 from pyrogram.enums import ParseMode
 from pyrogram import Client, filters
-from config import API_ID, API_HASH, SESSION_STRING, BOT_TOKEN, ADMIN_IDS, DEFAULT_LIMIT, ADMIN_LIMIT
+
+# --- Merged Configuration ---
+# Pyrogram setup
+API_ID = "36678014"
+API_HASH = "2f674efd2652a5cb857af17ae0056699"
+SESSION_STRING = "BQIvqX4ABBEsl11Av_t7NO-ed_IUd_AfhcbN-5BKJcMJgs8m3S3l0IPdC3JxsLrnjStXlCi_XpQUfGUkrbUwVuiEa1GI44SzuhzfJ07cYZ9bkmGbuwlf8ceFhCJ2XNozVPUq4Lj8cNyIu-ruh5DlGyR759sZHtngTYth3HEGRO1Vs0iJ1aNFATbJKhV4KojMCqmpEHN2Z33PdgGlHnhqQm8uHtaqp9YBNLxH10jdM8M-LmRxbiCfkvePg_WstUPl9jZy5lBbdvP9iPQ5s8VwYXJv_R3xf3xd0S5CDDT2Hff-xNv3I-xYukdpz-g1GPTGLTPzbTsm0zV7-9Vg-HHI7YSHvh8OyAAAAAHu1oLwAA"
+BOT_TOKEN = "8542163039:AAEAxU_6yeh9I5H05VMY8iZo3vA78L--6j4"
+
+# Admin IDs
+ADMIN_IDS = [8302002928,]
+
+# Limits
+DEFAULT_LIMIT = 10000 # Card Scrapping Limit For Everyone
+ADMIN_LIMIT = 50000 # Card Scrapping Limit For Admin
+# --- End of Configuration ---
+
 
 # Initialize the bot and user clients
 bot = Client(
@@ -104,4 +119,4 @@ async def scr_cmd(client, message):
 
 if __name__ == "__main__":
     user.start()
-    bot.run() 
+    bot.run()
